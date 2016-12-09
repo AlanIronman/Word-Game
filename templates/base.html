@@ -1,0 +1,16 @@
+<!DOCtype html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='wordGameApp.css') }}"/>
+    </head>
+    <body>
+         {% block body%}
+
+         {% endblock %}
+
+    </body>
+    <script src= "{{ url_for('static',filename='jquery-1.11.3.min.js') }}"></script>
+	<script src = "{{ url_for('static',filename='functions.js') }}"></script>
+	
+</html>

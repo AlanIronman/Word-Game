@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block body %}
+	<div class = "drop"></div>
+		<div>
+		    <h1>{{ username }} your overall rank is: {{ pos }}</h1>
+	   
+			<h2>Top 10 leaderborad</h2>
+				
+			<script> var n = 1;</script>
+			<table>
+				<tr>
+					<td> Rank </td><td>Name</td><td>Time</td>
+				</tr>
+				{% for r in rank %}
+				<tr>
+					<td> <script> document.write(n++);</script></td>
+					<td>{{ r[0] }}</td>
+					<td>{{ r[1] }}</td>
+				</tr>
+				{% endfor %}
+			</table>	
+
+			<form action = "/paulswordgame">
+		      	<input type = "submit" value = "Try Again" name = "Try Again" >
+		      	<a href="/start"><input type = "button" value = "Quit" name = "quit" ></a>
+		    </form>
+		</div>
+	
+	
+{% endblock %}

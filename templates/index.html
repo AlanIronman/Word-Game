@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block body %}
+
+    <div id = "v">
+      <video autoplay>
+        <source src="static/18629256.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div id = "links">
+      <H1>Paul's Epic Word Game!</H1>
+      <a href="/paulswordgame">Start Game</a>
+      <br>
+      <p id = "rlink">Rules</p>
+    </div>
+
+    <div id = "ruledrop"></div>
+    <div id = "rules"> 
+      <p>WordGame is a word game that tests your skill at word creation, checks if you can spell, and assesses your performance under pressure</p>
+
+      <p>As quick as you can... Think up seven three-or-more letter words made up from the letters contained within the word you're given. You cannot have duplicates or use the word you're given either. Best of luck... You'll need it!</p>
+      <br>
+      <input type = "button" value = "Got it!" id = "rul">
+    </div>
+    
+{% endblock %}

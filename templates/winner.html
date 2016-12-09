@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block body %}
+	<div id = "winnerdrop"></div>
+	<div id = "winner">
+		<h1 id = "winhead">You're a Winner!</h1>
+		
+		<form method = "POST" action = "/leaderboard">
+		    <h2>Enter Your Name</h2>
+		  	<input type = "Text" name = "playerName" required autocomplete = "off">
+		  	<br>
+	      	<input type = "Submit" value = "Enter">
+	    </form>
+	</div>
+{% endblock %}

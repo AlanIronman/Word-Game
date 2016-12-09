@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block body %}
+
+
+    <input type = "button" value = "Audio" id = "audiobutton">
+    <div id = "audio">
+      <audio controls autoplay >
+          <source  src="static/Mission Impossible - 1988.mp3" type = "audio/mpeg">
+      </audio>
+    </div>
+    
+    <div class = "drop" id = "startdrop"></div>
+    <div id = "start">
+  		<h2>Your word is: {{ word }} </h2>
+
+      <form action = '/paulswordgame' method = 'POST'>
+          1:<input type = "text" name = "first" required autocomplete = "off">
+          <br>
+          2:<input type = "text" name = "second" required autocomplete = "off">
+          <br>
+          3:<input type = "text" name = "thrid" required autocomplete = "off">
+          <br>
+          4:<input type = "text" name = "fourth" required autocomplete = "off">
+          <br>
+          5:<input type = "text" name = "fith" required autocomplete = "off">
+          <br>
+          6:<input type = "text" name = "six" required autocomplete = "off">
+          <br>
+          7:<input type = "text" name = "seventh" required autocomplete = "off">
+          <br>
+          <input type = "Submit" value = "Let's Go!">
+          <a href="/paulswordgame"><input type = "Button" value = "Restart"></a>
+          <br>
+          <a href="/start"><input type = "button" value = "Quit" name = "quit" ></a>
+      </form>
+    </div>
+    <h1 id = "three">3</h1>
+    <h1 id = "two">2</h1>
+    <h1 id = "one">1</h1>
+    <h1 id = "go">GO!</h1>
+
+{% endblock %}

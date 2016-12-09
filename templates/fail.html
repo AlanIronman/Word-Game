@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block body %}
+
+		<div class = "drop"></div>
+    <div>
+      <h1>Awesome Fail!</h1>
+  		<h2>The challange word was "{{ theword }}"</h2>
+      <p>
+        <b>Total incorret words: {{ num }}</b>
+      </p>
+  
+      <ul>
+        {% for word in list %}
+        <li>
+          <i>{{ word }}</i>
+        </li>
+        <br>
+        {% endfor %}
+      </ul>
+      <br>
+
+      {% if dup != 0 %}
+      <p>
+        <b>
+          Total duplication of words: {{ dup }}  
+          <br> They are:{% for word in duplist %} - {{ word }}  
+          {% endfor %}<br> 
+        </b>
+      </p>
+      {% endif %}
+      
+      <form action = "/paulswordgame">
+        <input type = "Submit" value = "Try Again" name = "Try Again" >
+      </form>
+    </div>
+{% endblock %}
